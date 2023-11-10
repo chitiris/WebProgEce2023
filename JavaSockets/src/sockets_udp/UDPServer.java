@@ -23,7 +23,7 @@ public class UDPServer {
             serverSocket.receive(receivePacket);
             
             // Μετατροπή των ληφθέντων δεδομένων σε συμβολοσειρά (string)
-            String sentence = new String(receivePacket.getData());
+            String sentence = new String(receivePacket.getData(), 0, receivePacket.getLength());
             InetAddress IPAddress = receivePacket.getAddress();
             int port = receivePacket.getPort();
             
