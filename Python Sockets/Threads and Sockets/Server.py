@@ -30,7 +30,7 @@ def handle_client(conn, addr):
 
             print(f"[{addr}] {msg}")
             print(f"[{addr}] {msg_length}")
-            conn.send("Msg received".encode(FORMAT)) #response
+            conn.send("Msg received ".encode(FORMAT)) #response
 
     conn.close()
 
